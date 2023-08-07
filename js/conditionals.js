@@ -68,39 +68,39 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
 
 let colorInput = prompt("What's your favorite color?");
 
-switch
+switch{
     case
-        (colorInput === 'red'){
+        (colorInput === 'red'): {
         alert("Wow, Red is such a deep color!")
     }
         break;
     case
-        (colorInput === 'yellow'){
+        (colorInput === 'yellow'):{
         alert("Yellow is such a bright color!")
         }
         break;
     case
-        (colorInput === 'green'){
+        (colorInput === 'green'):{
         alert("Green is a widely used color in national flags!")
         }
         break;
     case
-        (colorInput === 'orange'){
+        (colorInput === 'orange'):{
             alert("Oranges are one of my favorite fruits!")
         }
         break;
     case
-        (colorInput === 'blue'){
+        (colorInput === 'blue'):{
             alert("Blue is the color of the Sky and Sea!")
         }
         break;
     case
-        (colorInput === 'indigo'){
+        (colorInput === 'indigo'):{
             alert("Most blue dyes come from the Indigo plant!")
         }
         break;
     case
-        (colorInput === 'violet'){
+        (colorInput === 'violet'):{
             alert("Violet you're turning Violet!")
         }
         break;

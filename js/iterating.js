@@ -65,7 +65,7 @@
   }
 
   function stateLast (names){
-      return names[3];
+      return names[names.length-1];
   }
 
   stateFirst();

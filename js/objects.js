@@ -56,19 +56,22 @@
      ];
 
     // function to calculate the discount (if any).
-    shoppers.calDiscount = function() {
-        if (shoppers.amount > 200) {
-            console.log(shoppers.amount * .12);
+    //amount before discount
+    //amount after discount
+    //discount
+    const calDiscount = (shopper)=> {
+        if (shopper.amount > 200) {
+            console.log("Hey " + shopper.name + ". This is your total: " + shopper.amount);
+            console.log(shopper.name + " you qualify for a discount! You'll get a 12% discount!");
+            console.log("This is your total after your discount: " + shopper.amount * .012);
         } else {
-            return console.log(shoppers.amount);}
+            console.log("Hey " + shopper.name + ". This is your total: " + shopper.amount);
+            console.log(shopper.name + " you don't qualify for a discount! ");
+        }
     }
+    shoppers.forEach(calDiscount);
 
-    console.log("Hey, "+shoppers.name+"! Your total is "+shoppers.amount+". Additionally, your discount is "+shoppers.calDiscount(shoppers.amount));
-
-    // code must also calculate the discount towards each customer's amount.
-    // **** code must also connect back to the object to be called back and connected to the object; Should this just be stored in the object then?
-    // code must log how much cameron, ryan, and george have to pay in total; Should be stored in object.
-    // display a line with the person, their price before discount | price after discount| and if any the amount after discount.
+    // console.log("Hey, "+shoppers.name+"! Your total is "+shoppers.amount+". Additionally, your discount is "+shoppers.calDiscount(shoppers.amount));
 
     function getRandomInt(min, max) {
         return Math.floor(Math.random() * (max - min + 1) + min);

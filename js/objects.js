@@ -12,14 +12,11 @@
      *  > console.log(person.lastName) // "Sanchez"
      */
 
-    let person = [
-            {
-            firstName: 'Kaylee',
-            lastName: 'Knox',
-        }
-    ]
-    console.log(person.firstName);
-    console.log(person.lastName);
+    let person = {};
+
+    person.lastName = "Knox";
+    person.firstName = "Kaylee";
+
 
     /**
      * TODO:
@@ -30,6 +27,11 @@
      * Example
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
+    person.sayHello = function (){
+        console.log('Hello '+this.firstName+" "+this.lastName);
+    }
+    person.sayHello();
+
 
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
@@ -45,11 +47,33 @@
      * and console.log the relevant messages for each person
      */
 
-    // var shoppers = [
-    //     {name: 'Cameron', amount: 180},
-    //     {name: 'Ryan', amount: 250},
-    //     {name: 'George', amount: 320}
-    // ];
+    // object to hold the shoppers!
+    let shoppers = [
+         {name: 'Cameron', amount: 180},
+         {name: 'Ryan', amount: 250},
+         {name: 'George', amount: 320}
+
+     ];
+
+    // function to calculate the discount (if any).
+    shoppers.calDiscount = function() {
+        if (shoppers.amount > 200) {
+            console.log(shoppers.amount * .12);
+        } else {
+            return console.log(shoppers.amount);}
+    }
+
+    console.log("Hey, "+shoppers.name+"! Your total is "+shoppers.amount+". Additionally, your discount is "+shoppers.calDiscount(shoppers.amount));
+
+    // code must also calculate the discount towards each customer's amount.
+    // **** code must also connect back to the object to be called back and connected to the object; Should this just be stored in the object then?
+    // code must log how much cameron, ryan, and george have to pay in total; Should be stored in object.
+    // display a line with the person, their price before discount | price after discount| and if any the amount after discount.
+
+    function getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+    getRandomInt(1,10);
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
@@ -63,6 +87,8 @@
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
+
+    let books = ["Eleceed, First Night with the Duke, Age Matters, Tower of God, Sleeping Beauty"];
 
     /**
      * TODO:

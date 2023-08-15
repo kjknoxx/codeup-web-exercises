@@ -2,10 +2,10 @@
 // I. Refactor your message to use template strings.
 //     Ii. Add validation to make sure the argument passed to the function is a string datatype only.
 function logUser(x) {
-    if (isNaN(x)) {
-        return console.log( `${x} has logged in for the day!`);
+    if (typeof(x)!== `string`) {
+        return console.log( `That is not a valid input`);
     } else {
-        return console.log(`That is not a valid input.`);
+        return console.log(`${x} has logged in for the day!`);
     }
 }
-console.log(logUser("kay-lee"));
+console.log(logUser(true));

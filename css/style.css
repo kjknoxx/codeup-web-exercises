@@ -1,0 +1,24 @@
+.fancy-header {
+    color: #c2c2c2; /* single line comment */
+    text-decoration: underline;
+    text-align: center;
+}
+.headerStyle {
+    color: #cebdff;
+    text-decoration: underline;
+}
+.background {
+    background-color: ghostwhite;
+    background-image: url("https://www.transparenttextures.com/patterns/bright-squares.png");
+    font-family: Arial;
+
+}
+ul {
+    list-style: square;
+}
+td {
+    padding: 10px;
+}
+tr {
+    padding: 10px;
+}

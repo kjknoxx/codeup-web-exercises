@@ -79,39 +79,41 @@
             <!--Tab 1-->
             <div class="tab-pane active" id="tab1" role="tabpanel">
                 <div class="card">
-                    <div class="card-header text-bg-primary">
-                        Choose Size and Crust
-                    </div>
-                    <div class="card-header">
-                        Hand Tossed
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Garlic seasoned crust with a rich, buttery taste.</li>
-                        <li class="list-group-item">  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                            <label class="form-check-label" for="flexRadioDefault1">
-                                Small (10")
-                            </label>
+                    <ul class="list-group">
+                        <div class="card-header text-bg-primary">
+                            Choose Size and Crust
+                        </div>
+                        <li class="list-group-item">
+                            <ul class="list-group">
+                                <li class="list-group-item text-bg-light">Hand Tossed</li>
+                                <li class="list-group-item">Garlic seasoned crust with a rich, buttery taste.</li>
+                                <li class="list-group-item">  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        Small (10")
+                                    </label>
+                                </li>
+                                <li class="list-group-item">  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        Medium (13")
+                                    </label>
+                                </li>
+                            </ul>
                         </li>
-                        <li class="list-group-item">  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                            <label class="form-check-label" for="flexRadioDefault1">
-                                Medium (13")
-                            </label>
-                        </li>
-                    </ul>
-                    <div class ="card-header">
-                        Crispy Thin
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Thin enough for optimum crispy to crunchy ratio.</li>
-                        <li class="list-group-item">  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                            <label class="form-check-label" for="flexRadioDefault1">
-                                Medium (12")
-                            </label>
-                        </li>
-                        <li class="list-group-item">  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                            <label class="form-check-label" for="flexRadioDefault1">
-                                Large (13")
-                            </label>
+                        <li class="list-group-item">
+                            <ul class="list-group">
+                                <li class="list-group-item text-bg-light">Crispy Thin</li>
+                                <li class="list-group-item">Thin enough for optimum crispy to crunchy ratio.</li>
+                                <li class="list-group-item">  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        Medium (12")
+                                    </label>
+                                </li>
+                                <li class="list-group-item">  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        Large (13")
+                                    </label>
+                                </li>
+                            </ul>
                         </li>
                     </ul>
                     <div class="card-footer d-flex justify-content-end">
@@ -122,47 +124,30 @@
             <!--Tab 2-->
             <div class="tab-pane" id="tab2" role="tabpanel">
                 <div class="card">
-                    <div class="card">
+                    <ul class="list-group">
                         <div class="card-header text-bg-primary">
-                            Cheese and Sauce
+                            Choose Cheese and Sauce
                         </div>
-                        <div class="card-header">
-                            How Much?
-                        </div>
-                        <div class="card-header">
+                        <li class="list-group-item text-bg-light">How Much?</li>
+                        <li class="list-group-item">
                             <select class="form-select form-select" aria-label="Small select example">
                                 <option selected>Normal</option>
                                 <option value="1">Light</option>
                                 <option value="2">Extra</option>
                                 <option value="3">Double</option>
                             </select>
-                        </div>
-                        <div class="card-header">
-                            What Type?
-                        </div>
-                        <div class="card-header">
-                            <select class="form-select form-select" aria-label="Small select example">
-                                <option selected>Tomato</option>
-                                <option value="1">Marinara</option>
-                                <option value="2">BBQ/option>
-                                <option value="3">Alfredo</option>
-                            </select>
-                        </div>
-                        <div class="card-header">
-                            How much?
-                        </div>
-                        <div class="card-header">
+                        </li>
+                        <li class="list-group-item">What Type?</li>
+                        <li class="list-group-item">
                             <select class="form-select form-select" aria-label="Small select example">
                                 <option selected>Normal</option>
                                 <option value="1">Light</option>
                                 <option value="2">Extra</option>
                                 <option value="3">Double</option>
                             </select>
-                        </div>
-                        <div class="card-footer d-flex justify-content-end">
-                            <button type="button" class="btn btn-primary">Previous Step</button> <button type="button" class="btn btn-primary">Next Step</button>
-                        </div>
-                    </div>
+                        </li>
+                        <li class="list-group-item"></li>
+                    </ul>
                 </div>
             </div>
             <!--Tab 3-->

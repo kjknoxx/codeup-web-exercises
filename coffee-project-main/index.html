@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        Coffee Shop
+    </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!--Header-->
+<h1>Coffee!</h1>
+<!--Search input to search the coffee's object-->
+<div class="form-box">
+    <form>
+        <input id="search-bar" type="text" class="search-bar" placeholder="Search for a Coffee...">
+    </form>
+
+    <!--Label sort for the coffees-->
+    <form>
+        <label for="roast-selection"></label>
+        <select id="roast-selection">
+            <option>light</option>
+            <option>medium</option>
+            <option>dark</option>
+        </select>
+        <input id="submit" type="submit" />
+    </form>
+</div>
+<!--div for the coffees to be displayed-->
+<div class="coffee-search-box">
+    <div id="coffees" class="coffees">
+
+    </div>
+</div>
+<script src="main.js"></script>
+</body>
+</html>

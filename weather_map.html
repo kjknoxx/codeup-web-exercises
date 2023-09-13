@@ -1,0 +1,82 @@
+<!--TODO: -->
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Weather Map Project</title>
+
+  <!--Regular CSS Files-->
+  <link href="css/weather-map.css" rel="stylesheet">
+  <link href="css/resets.css" rel="stylesheet">
+
+  <!--MAPBOX connections-->
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet' />
+
+
+</head>
+<body>
+  <!--  main div that wraps our page-->
+  <div class="page-wrapper">
+    <!--Nav Bar will go here!-->
+    <nav>
+
+    </nav>
+    <!--holds searchbar + cards-->
+    <div class="search-card-holder">
+      <!--search bar will go here-->
+      <div class="Search-bar">
+
+      </div>
+      <!--weather cards go here-->
+      <div class="weather-card-holder">
+        <!--weather card 1-->
+        <div class="w-card-1">
+
+        </div>
+        <!--weather card 2-->
+        <div class="w-card-2">
+
+        </div>
+        <!--weather card 3-->
+        <div class="w-card-3">
+
+        </div>
+        <!--weather card 4-->
+        <div class="w-card-4">
+
+        </div>
+        <!--weather card 5-->
+        <div class="w-card-5">
+
+        </div>
+      </div>
+    </div>
+
+    <div id='map'>
+    </div>
+  </div>
+
+  <!--TODO: JS Files-->
+  <!--JQuery CDN-->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <!--Custom JS file-->
+  <script src="js/weather-map.js"></script>
+  <!--Key File-->
+  <script src="js/keys.js"></script>
+
+  <!--MAPBOX Scripts-->
+  <script>
+    mapboxgl.accessToken = mapToken;
+    const map = new mapboxgl.Map({
+      container: 'map', // container ID
+      style: 'mapbox://styles/mapbox/streets-v12', // style URL
+      center: [-74.5, 40], // starting position [lng, lat]
+      zoom: 11, // starting zoom
+    });
+  </script>
+</body>
+</html>

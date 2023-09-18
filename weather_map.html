@@ -1,4 +1,5 @@
-<!--TODO: -->
+<!--Day 1 Goal: Get HTML/CSS over with-->
+<!--TODO: Day 2: Start JS Code, Try to finish necessary functions for code today.-->
 
 <!doctype html>
 <html lang="en">
@@ -22,36 +23,55 @@
   <!--  main div that wraps our page-->
   <div class="page-wrapper">
     <!--Nav Bar will go here!-->
-    <nav>
-
+    <nav class="nav-bar">
+      <div class="cloud-img">
+        <img src="HTML-images/icons8-cloud-50.png" alt="cloud">
+      </div>
+      <div class="header">
+        <H1>Weather App</H1>
+      </div>
+        <!--Change to display whatever current city is searched-->
+        <!--<div class="current">-->
+        <!--<p>Current City:</p>-->
+        <!--</div>-->
     </nav>
+    <!--search bar will go here-->
+    <div class="search-holder">
+      <div class="Search-bar">
+        <form id="form-holder">
+          <input id="searchBox" class="search-box" type="text" placeholder="Enter your address">
+          <button class="search-button" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
     <!--holds searchbar + cards-->
     <div class="search-card-holder">
-      <!--search bar will go here-->
-      <div class="Search-bar">
-
-      </div>
       <!--weather cards go here-->
       <div class="weather-card-holder">
         <!--weather card 1-->
-        <div class="w-card-1">
-
+        <div id="card1" class="w-card">
+          <h3>Lorem ipsum</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dictum at tempor commodo ullamcorper a. Ac tortor vitae purus faucibus ornare suspendisse sed nisi.</p>
         </div>
         <!--weather card 2-->
-        <div class="w-card-2">
-
+        <div id="card2" class="w-card">
+          <h3>Lorem ipsum</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dictum at tempor commodo ullamcorper a. Ac tortor vitae purus faucibus ornare suspendisse sed nisi.</p>
         </div>
         <!--weather card 3-->
-        <div class="w-card-3">
-
+        <div id="card3" class="w-card">
+          <h3>Lorem ipsum</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dictum at tempor commodo ullamcorper a. Ac tortor vitae purus faucibus ornare suspendisse sed nisi.</p>
         </div>
         <!--weather card 4-->
-        <div class="w-card-4">
-
+        <div id="card4" class="w-card">
+          <h3>Lorem ipsum</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dictum at tempor commodo ullamcorper a. Ac tortor vitae purus faucibus ornare suspendisse sed nisi.</p>
         </div>
         <!--weather card 5-->
-        <div class="w-card-5">
-
+        <div id="card5" class="w-card">
+          <h3>Lorem ipsum</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dictum at tempor commodo ullamcorper a. Ac tortor vitae purus faucibus ornare suspendisse sed nisi.</p>
         </div>
       </div>
     </div>
@@ -59,24 +79,18 @@
     <div id='map'>
     </div>
   </div>
+  <footer>
+
+  </footer>
 
   <!--TODO: JS Files-->
   <!--JQuery CDN-->
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-  <!--Custom JS file-->
-  <script src="js/weather-map.js"></script>
   <!--Key File-->
   <script src="js/keys.js"></script>
-
-  <!--MAPBOX Scripts-->
-  <script>
-    mapboxgl.accessToken = mapToken;
-    const map = new mapboxgl.Map({
-      container: 'map', // container ID
-      style: 'mapbox://styles/mapbox/streets-v12', // style URL
-      center: [-74.5, 40], // starting position [lng, lat]
-      zoom: 11, // starting zoom
-    });
-  </script>
+  <!--Geocode Script-->
+  <script src="js/mapbox-geocode.js"></script>
+  <!--Custom JS file-->
+  <script src="js/weather-map.js"></script>
 </body>
 </html>

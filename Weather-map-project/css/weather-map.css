@@ -1,0 +1,206 @@
+/*Import for Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Infant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Hind+Madurai:wght@300;400;500;600;700&family=Sarala:wght@400;700&display=swap');
+
+/*TODO: Font Families Presented for easy access/copy paste*/
+/*font-family: 'Bebas Neue', sans-serif;*/
+/*font-family: 'Cormorant Infant', serif;*/
+/*font-family: 'Hind Madurai', sans-serif;*/
+/*font-family: 'Sarala', sans-serif;*/
+
+/*Main Color Variables*/
+:root {
+    --text: #a48b84;
+    --text-2: #ffffff;
+    --background: #f5f5f6;
+    --primary: #c6ac9f;
+    --secondary: #e3d5cf;
+    --secondary-2: #eee6e4;
+    --accent: #916955;
+}
+
+/*DIV with main flex box control*/
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background);
+}
+
+/*ID for MAPBOX*/
+#map {
+    width: 100%;
+    height: 400px;
+    z-index: 1;
+}
+
+/*Main Navbar DIV*/
+.nav-bar {
+    background-color: var(--secondary);
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+/*Cloud Icon*/
+.cloud-img {
+    padding: 6px;
+}
+
+/*DIV holding Search Box & Button*/
+.search-holder {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    background: var(--background);
+}
+
+/*Holds Cards for 5 Day Weather*/
+.weather-card-holder {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+/*Search Bar holder*/
+.search-bar {
+    margin: 25px 0 0 0;
+    display: flex;
+    justify-content: left;
+
+}
+
+/*Search Button Styles*/
+.search-button {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 30px;
+    color: var(--background);
+    background-color: var(--text);
+    border-style: none;
+    border-radius: 25px;
+    /*padding: 20px;*/
+    width: 150px;
+    height: 60%;
+    transition: 0.3s;
+}
+
+/*Search Button Hover Animation*/
+.search-button:hover {
+    border-radius: 25px;
+    padding: 8px;
+    letter-spacing: 5px;
+}
+
+/*Search Box Styles*/
+.search-box {
+    font-family: 'Cormorant Infant', serif;
+    color: darkgrey;
+    width: 400px;
+    height: 100%;
+    border-radius: 25px;
+    padding: 20px;
+    font-size: 20px;
+    border-style: none;
+    transition: 0.8s;
+}
+
+/*Search Box Animation*/
+.search-box:hover {
+    letter-spacing: 3px;
+}
+
+/*Card's Styles*/
+.w-card {
+    width: 250px;
+    height: 200px;
+    background-image: linear-gradient(var(--secondary-2), var(--secondary));
+    border-radius: 25px;
+    padding: 20px;
+    transition: 0.5s;
+    color: var(--background);
+}
+
+/*Card Animations*/
+.w-card:hover {
+    width: 300px;
+    height: 200px;
+}
+
+/*Holder for the text body*/
+.body-text-wrapper {
+    padding-left: 100px;
+}
+
+/*Box that holds the city*/
+.currentCityBox {
+    width: 810px;
+}
+
+/*H1 Style*/
+h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 50px;
+    color: var(--text);
+    font-style: normal;
+    text-indent: 15px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    transition: 0.8s;
+}
+
+/*H1 Animation*/
+h1:hover {
+    letter-spacing: 5px;
+    text-indent: 20px;
+}
+
+/*H2 Style*/
+h2 {
+    font-family: 'Sarala', sans-serif;
+    font-size: 80px;
+    color: var(--primary);
+    transition: 0.8s;
+}
+
+/*h2 Hover Animation*/
+h2:hover {
+    font-size: 82px;
+    letter-spacing: 1px;
+
+}
+
+/*H3 Style*/
+h3 {
+    text-align: center;
+    font-size: 45px;
+    color: var(--text-2);
+    font-style: oblique;
+    transition: 0.8s;
+}
+
+/*h3 hover animation*/
+h3:hover {
+    font-size: 50px;
+}
+
+/*h4 styles*/
+h4 {
+    color: var(--text);
+    font-family: 'Hind Madurai', sans-serif;
+    text-align: center;
+    font-size: 20px;
+}
+
+/*h5 styles*/
+h5 {
+    color: var(--text);
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 30px;
+}
+
+/*P Styles*/
+p {
+    color: var(--text);
+    text-align: center;
+    font-family: 'Hind Madurai', sans-serif;
+    letter-spacing: 2px;
+}

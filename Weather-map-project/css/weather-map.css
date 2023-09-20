@@ -14,7 +14,7 @@
     --background: #f5f5f6;
     --primary: #c6ac9f;
     --secondary: #e3d5cf;
-    --secondary-2: #eee6e4;
+    --secondary-2: #f5f1f1;
     --accent: #916955;
 }
 
@@ -79,7 +79,7 @@
     border-radius: 25px;
     /*padding: 20px;*/
     width: 150px;
-    height: 60%;
+    height: 79%;
     transition: 0.3s;
 }
 
@@ -92,7 +92,7 @@
 
 /*Search Box Styles*/
 .search-box {
-    font-family: 'Cormorant Infant', serif;
+    font-family: 'Hind Madurai', sans-serif;
     color: darkgrey;
     width: 400px;
     height: 100%;
@@ -110,7 +110,7 @@
 
 /*Card's Styles*/
 .w-card {
-    width: 250px;
+    width: 300px;
     height: 200px;
     background-image: linear-gradient(var(--secondary-2), var(--secondary));
     border-radius: 25px;
@@ -121,8 +121,9 @@
 
 /*Card Animations*/
 .w-card:hover {
-    width: 300px;
+    width: 320px;
     height: 200px;
+    box-shadow: 0 0 2px 5px var(--secondary-2);
 }
 
 /*Holder for the text body*/
@@ -156,14 +157,14 @@ h1:hover {
 /*H2 Style*/
 h2 {
     font-family: 'Sarala', sans-serif;
-    font-size: 80px;
+    font-size: 70px;
     color: var(--primary);
     transition: 0.8s;
 }
 
 /*h2 Hover Animation*/
 h2:hover {
-    font-size: 82px;
+    font-size: 72px;
     letter-spacing: 1px;
 
 }

@@ -38,7 +38,7 @@ function populateCards (res, reverse) {
         currentCity.innerHTML = reverse ? `<h2>${res.features[3].place_name}</h2>`:`<h2>${res.features[0].place_name}</h2>`
     });
 
-// Card 1 projection
+    // Card 1 projection
     $.get("http://api.openweathermap.org/data/2.5/weather", {
         APPID: weatherToken,
         lat:    res.features[0].center[1],
@@ -52,7 +52,7 @@ function populateCards (res, reverse) {
                             <p>Feels like: ${data.main.feels_like}º F</p>`
     });
 
-// Card 2 Projection
+    // Card 2 Projection
     $.get("http://api.openweathermap.org/data/2.5/forecast", {
         APPID: weatherToken,
         lat:    res.features[0].center[1],
@@ -65,7 +65,7 @@ function populateCards (res, reverse) {
                             <h4>${data.list[8].dt_txt.substring(0,10)}</h4>`
     });
 
-// Card 3 Projection
+    // Card 3 Projection
     $.get("http://api.openweathermap.org/data/2.5/forecast", {
         APPID: weatherToken,
         lat:    res.features[0].center[1],
@@ -77,7 +77,7 @@ function populateCards (res, reverse) {
                             <h4>${data.list[16].dt_txt.substring(0,10)}</h4>`
     });
 
-// Card 4 Projection
+    // Card 4 Projection
     $.get("http://api.openweathermap.org/data/2.5/forecast", {
         APPID: weatherToken,
         lat:    res.features[0].center[1],
@@ -89,7 +89,7 @@ function populateCards (res, reverse) {
                             <h4>${data.list[24].dt_txt.substring(0,10)}</h4>`
     });
 
-// Card 5 Projection
+    // Card 5 Projection
     $.get("http://api.openweathermap.org/data/2.5/forecast", {
         APPID: weatherToken,
         lat:    res.features[0].center[1],
@@ -202,3 +202,4 @@ marker.on('dragend',onDragEnd);
 // 5. Mock footer that credits MAPBOX API & openWeather API
 // 6. Clean up code using modules | Import & Export usages
 // 7. Refactor style nit-picks
+// 8. Change layout on webpage to be more easy to navigate/read

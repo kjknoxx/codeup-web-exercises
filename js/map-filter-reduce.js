@@ -1,3 +1,4 @@
+// Array of user objects
 const users = [
     {
         id: 1,
@@ -36,14 +37,34 @@ const users = [
     }
 ];
 
-//TODO: Use .filter to create an array of user objects where each user object has at least 3 languages in the languages array.
+// Use .filter to get users with at least 3 languages
+const usersWith3Languages = users.filter(user => user.languages.length >= 3);
 
+// Use .map to get an array of email addresses
+const userEmails = users.map(user => user.email);
 
+// Use .reduce to get the total years of experience
+const totalYearsOfExperience = users.reduce((total, user) => total + user.yearsOfExperience, 0);
 
-//TODO: Use .map to create an array of strings where each element is a user's email address
+// Calculate the average years of experience
+const averageYearsOfExperience = totalYearsOfExperience / users.length;
 
-// TODO: Use .reduce to get the total years of experience from the list of users. Once you get the total of years you can use the result to calculate the average.
+// Use .reduce to get the longest email
+const longestEmail = users.reduce((longest, user) => {
+    return user.email.length > longest.length ? user.email : longest;
+}, '');
 
-// TODO: Use .reduce to get the longest email from the list of users.
+// Use .reduce to get a single string of user names
+const userNamesString = users.reduce((namesString, user, index, array) => {
+    if (index === array.length - 1) {
+        return `${namesString}and ${user.name}.`;
+    }
+    return `${namesString}${user.name}, `;
+}, 'Your instructors are: ');
 
-// TODO: Use .reduce to get the list of user's names in a single string. Example: Your instructors are: ryan, luis, zach, fernando, justin.
+console.log('Users with at least 3 languages:', usersWith3Languages);
+console.log('User emails:', userEmails);
+console.log('Total years of experience:', totalYearsOfExperience);
+console.log('Average years of experience:', averageYearsOfExperience);
+console.log('Longest email:', longestEmail);
+console.log(userNamesString);

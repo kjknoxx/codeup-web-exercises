@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Konami Code</title>
+</head>
+<body>
+
+<script>
+  // Define the Konami Code sequence
+  const konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
+
+  // Initialize a variable to keep track of the user's input
+  let userInput = [];
+
+  // Add an event listener to the document to listen for key presses
+  document.addEventListener('keydown', function (e) {
+    userInput.push(e.key);
+
+    // Check if the user's input matches the Konami Code
+    if (userInput.join('') === konamiCode.join('')) {
+      alert('Konami Code activated!');
+      userInput = [];
+    }
+  });
+</script>
+
+</body>
+</html>

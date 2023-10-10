@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Parks</title>
+    <style>
+        .highlighted {
+            background-color: yellow;
+            font-weight: bold;
+        }
+        .blue-text {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+
+<h1>National Parks FAQ</h1>
+
+<dl>
+</dl>
+
+<h2>National Parks Information</h2>
+
+<ul>
+    <li>
+        <h3>Yellowstone National Park</h3>
+        <ul>
+            <li>Established: March 1, 1872</li>
+            <li>Size: 2,219,791 acres</li>
+            <li>Location: Wyoming, Montana, Idaho</li>
+            <li>Notable Feature: Geothermal wonders</li>
+        </ul>
+    </li>
+    <li>
+        <h3>Grand Canyon National Park</h3>
+        <ul>
+            <li>Established: February 26, 1919</li>
+            <li>Size: 1,201,647 acres</li>
+            <li>Location: Arizona</li>
+            <li>Notable Feature: Iconic canyon views</li>
+        </ul>
+    </li>
+    <li>
+        <h3>Yosemite National Park</h3>
+        <ul>
+            <li>Established: October 1, 1890</li>
+            <li>Size: 748,436 acres</li>
+            <li>Location: California</li>
+            <li>Notable Feature: Waterfalls and granite cliffs</li>
+        </ul>
+    </li>
+</ul>
+
+<button id="highlightButton">Highlight Last Items</button>
+
+<script>
+    // Function to handle the click event on h3 elements
+    function handleH3Click(event) {
+        // Toggle the class 'highlighted' on the next sibling ul
+        const ul = event.target.nextElementSibling;
+        ul.classList.toggle('highlighted');
+    }
+
+    // Function to handle the click event on li elements
+    function handleLiClick(event) {
+        // Add 'blue-text' class to the first li of the parent ul
+        const parentUl = event.target.parentElement.parentElement;
+        const firstLi = parentUl.querySelector('li');
+        firstLi.classList.add('blue-text');
+    }
+
+    // Add click event listeners to all h3 elements
+    const h3Elements = document.querySelectorAll('h3');
+    h3Elements.forEach(function (h3) {
+        h3.addEventListener('click', handleH3Click);
+    });
+
+    // Add click event listeners to all li elements
+    const liElements = document.querySelectorAll('li');
+    liElements.forEach(function (li) {
+        li.addEventListener('click', handleLiClick);
+    });
+
+    // Add click event listener to the button to highlight last li in each ul
+    document.getElementById('highlightButton').addEventListener('click', function () {
+        const ulElements = document.querySelectorAll('ul');
+        ulElements.forEach(function (ul) {
+            const lastLi = ul.querySelector('li:last-child');
+            lastLi.style.backgroundColor = 'yellow';
+        });
+    });
+</script>
+
+</body>
+</html>

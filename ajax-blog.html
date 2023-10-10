@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ajax Blog</title>
+  <!-- Include Bootstrap CSS or your custom CSS here -->
+  <link rel="stylesheet" href="path/to/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+  <header class="text-center my-4">
+    <h1>Ajax Blog</h1>
+  </header>
+  <main>
+    <div id="posts" class="mt-4">
+      <!-- Blog posts will be loaded here -->
+    </div>
+  </main>
+</div>
+<script>
+  // Function to fetch and display blog posts
+  function loadBlogPosts() {
+    const postsContainer = document.getElementById('posts');
+
+    // Use Ajax (fetch) to load the contents of blog.json
+    fetch('data/blog.json')
+            .then(response => response.json())
+            .then(data => {
+              // Iterate through the blog posts and display them
+              data.forEach(post => {
+                const postElement = document.createElement('div');
+                postElement.classList.add('blog-post');
+                postElement.innerHTML = `
+                            <h2>${post.title}</h2>
+                            <p>${post.content}</p>
+                        `;
+                postsContainer.appendChild(postElement);
+              });
+            })
+            .catch(error => console.error('Error fetching data:', error));
+  }
+
+  // Call the function to load blog posts when the page loads
+  window.addEventListener('DOMContentLoaded', loadBlogPosts);
+</script>
+</body>
+</html>
